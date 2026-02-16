@@ -9,6 +9,10 @@ class Auth extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Phone number"),
+        backgroundColor: Color(0xffD1D1D6),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(12),
@@ -16,14 +20,14 @@ class Auth extends StatelessWidget {
             // mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Center(
-                child: Text("Phone number",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold
-                ),
-                ),
-              ),
+              // Center(
+              //   child: Text("Phone number",
+              //   style: TextStyle(
+              //     fontSize: 20,
+              //     fontWeight: FontWeight.bold
+              //   ),
+              //   ),
+              // ),
               SizedBox(
                 height: 48,
               ),
@@ -37,7 +41,7 @@ class Auth extends StatelessWidget {
                 children: [
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Pakistan", textAlign: TextAlign.left, style: TextStyle(fontSize: 17, color: Colors.blue),)),
+                    child: Text("Pakistan", textAlign: TextAlign.left, style: TextStyle(fontSize: 17, color: Color(0xff007AFF)),)),
                   Row(
                     children: [
                       Text("+92 ", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
@@ -63,7 +67,7 @@ class Auth extends StatelessWidget {
                   SizedBox(height: 200,),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lightBlueAccent,
+                      backgroundColor: Color(0xffD1D1D6),
                     ),
                     onPressed: (
                     (){
