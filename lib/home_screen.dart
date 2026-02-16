@@ -26,6 +26,9 @@ class HomeScreen extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xffD1D1D6),
+                  shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadiusGeometry.circular(10)
+                      )
                 ),
                 onPressed: () {
                   Navigator.push(
