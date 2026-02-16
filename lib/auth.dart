@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:whatsapp_ui/home_screen.dart';
 
 class Auth extends StatelessWidget {
@@ -10,7 +11,7 @@ class Auth extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(12),
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,8 +47,14 @@ class Auth extends StatelessWidget {
                           child: TextFormField(
                             decoration: InputDecoration(
                             hintText: "phone number",
+                            // border: InputBorder.none
                             ),
                             keyboardType: TextInputType.numberWithOptions(),
+                            inputFormatters: [
+                              FilteringTextInputFormatter.digitsOnly,
+                              LengthLimitingTextInputFormatter(10),
+                            ],
+                            
                           ),
                         ),
                       ),
@@ -56,7 +63,6 @@ class Auth extends StatelessWidget {
                   SizedBox(height: 200,),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-
                       backgroundColor: Colors.lightBlueAccent,
                     ),
                     onPressed: (
@@ -65,7 +71,9 @@ class Auth extends StatelessWidget {
                     }
                   ), child: Align(
                     alignment: Alignment.center,
-                    child: Text("Submit",)))
+                    child: Text("Next",)
+                    )
+                  )
                 ],
               )
             ],
