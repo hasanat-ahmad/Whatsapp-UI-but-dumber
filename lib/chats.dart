@@ -24,9 +24,25 @@ class _ChatsState extends State<Chats> {
             PopupMenuButton(
               icon: Icon(Icons.more_vert_outlined),
               itemBuilder: (context) => [
-                PopupMenuItem(value: 1, child: Text("New Group")),
-                PopupMenuItem(value: 2, child: Text("Setting")),
-                PopupMenuItem(value: 3, child: Text("Log Out")),
+                PopupMenuItem(
+                  value: 3,
+                  child: TextButton(onPressed: () {}, child: Text("New Group")),
+                ),
+
+                PopupMenuItem(
+                  value: 3,
+                  child: TextButton(onPressed: () {}, child: Text("Setting")),
+                ),
+
+                PopupMenuItem(
+                  value: 3,
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.popUntil(context, (route) => route.isFirst);
+                    },
+                    child: Text("Log Out"),
+                  ),
+                ),
               ],
             ),
             SizedBox(width: 10),
