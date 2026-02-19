@@ -11,7 +11,7 @@ class _ChatsState extends State<Chats> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           foregroundColor: Colors.white,
@@ -33,7 +33,7 @@ class _ChatsState extends State<Chats> {
           ],
           bottom: TabBar(
             tabs: [
-              Tab(child: Icon(Icons.camera_alt)),
+              // Tab(child: Icon(Icons.camera_alt)),
               Tab(child: Text("Chats")),
               Tab(child: Text("Status")),
               Tab(child: Text("Calls")),
@@ -42,7 +42,7 @@ class _ChatsState extends State<Chats> {
         ),
         body: TabBarView(
           children: [
-            Text("Camera"),
+            // Text("Camera"),
             ListView.builder(
               itemCount: 100,
               itemBuilder: (context, index) => ListTile(
